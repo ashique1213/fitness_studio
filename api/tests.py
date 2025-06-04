@@ -43,7 +43,7 @@ class APITests(TestCase):
         }
         response = self.client.post('/api/book/', data, format='json')
         self.assertEqual(response.status_code, 400)
-        self.assertIn("No slots available", response.data['error'])
+        self.assertIn("No slots available for this class.", response.data['non_field_errors'][0])
 
     def test_create_booking_invalid_email(self):
         data = {
@@ -53,7 +53,7 @@ class APITests(TestCase):
         }
         response = self.client.post('/api/book/', data, format='json')
         self.assertEqual(response.status_code, 400)
-        self.assertIn("Invalid email format", response.data['client_email'][0])
+        self.assertIn("Enter a valid email address.", response.data['client_email'][0])
 
     def test_get_bookings(self):
         Booking.objects.create(
