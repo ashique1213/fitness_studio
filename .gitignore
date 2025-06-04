@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pdb
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Django
+*.sqlite3
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+*.env
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Migrations (optional - keep only if you're regenerating them)
+**/migrations/*.pyc
+**/migrations/__pycache__/
+# Uncomment the next line if you want to ignore migration files entirely
+# **/migrations/*.py
+
+# Testing
+test-results/
+.pytest_cache/
+
